@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://msft3c.com/compete/problem/4 -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Learn | Microsoft College Code Competition (msft3c)</title>
+    
+    <meta name="description" content="Paragon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://www.microsoft.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.microsoft.com/favicon.ico" type="image/x-icon">
+
+    <link href="./q22_files/lib" rel="stylesheet">
+
+    <link href="./q22_files/site" rel="stylesheet">
+
+    
+    
+    <link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./q22_files/editor.main.css"><link href="./q22_files/compete" rel="stylesheet">
+
+
+
+
+    
+    
+        <script type="text/javascript">
+            var appInsights = window.appInsights || function (config) {
+                function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f; for (s.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) r("track" + i.pop()); return r("setAuthenticatedUserContext"), r("clearAuthenticatedUserContext"), config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t["_" + i](config, r, u, e, o), s }), t
+            }({
+                instrumentationKey: "0a0762d6-9bff-49fa-8750-18f208e969c8"
+            });
+
+            window.appInsights = appInsights;
+            appInsights.trackPageView();
+        </script><script src="./q22_files/ai.0.js"></script>
+            <script type="text/javascript">
+                window.appInsights && appInsights.setAuthenticatedUserContext("844627".replace(/[,;=| ]+/g, "_"));
+            </script>
+    <!--
+        Third party scripts and code linked to or referenced from the Services
+        are licensed to you by the third parties that own such code, and are not
+        licensed by Microsoft other than for the purpose of viewing and interacting
+        with the Service.
+    -->
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="webapp/main" src="./q22_files/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/app" src="./q22_files/app.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/system" src="./q22_files/system.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewLocator" src="./q22_files/viewLocator.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewEngine" src="./q22_files/viewEngine.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/composition" src="./q22_files/composition.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/events" src="./q22_files/events.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/binder" src="./q22_files/binder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/activator" src="./q22_files/activator.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="plugins/router" src="./q22_files/router.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="plugins/history" src="./q22_files/history.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/index" src="./q22_files/index.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/router" src="./q22_files/router(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./q22_files/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/index" src="./q22_files/index(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/router" src="./q22_files/router(2).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/problem" src="./q22_files/problem.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/modelfactory" src="./q22_files/modelfactory.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/problemSet" src="./q22_files/problemSet.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/cache" src="./q22_files/cache.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/error" src="./q22_files/error.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/details/learn" src="./q22_files/learn.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/list" src="./q22_files/list.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/details/index" src="./q22_files/index(2).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/scoreboard" src="./q22_files/scoreboard.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/leaderboard" src="./q22_files/leaderboard.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/team" src="./q22_files/team.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="transitions/entrance" src="./q22_files/entrance.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/details/practice" src="./q22_files/practice.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/editor/editor.main" src="./q22_files/editor.main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/nls" src="./q22_files/nls.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/css" src="./q22_files/css.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/editor/editor.main.nls" src="./q22_files/editor.main.nls.js"></script><style type="text/css" media="screen"></style><style type="text/css" media="screen"></style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="compete/problem/details/earn" src="./q22_files/earn.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/attempt" src="./q22_files/attempt.js"></script></head>
+<body cz-shortcut-listen="true">
+    <div id="notices" style="display: none;">
+    <div id="cookie-notice" class="notice">
+        <span id="cookie-notice-text">
+            By using this site you agree to the use of cookies for analytics and personalized content.
+        </span>
+        <a id="cookie-notice-close">
+            <i id="cookie-icon" class="ms-Icon ms-Icon--xCircle"></i>
+        </a>
+    </div>
+</div>
+
+<header class="site">
+    <h1>
+        <a href="https://msft3c.com/">
+            msft3c
+        </a>
+    </h1>
+
+    <nav class="commands">
+            <div class="me">
+                <a id="expand-me" href="https://msft3c.com/compete/problem/4#"><span class="name">Kyle O'Connor</span><img src="./q22_files/picture" class="profile-picture small" alt="Your account profile image"></a>
+                
+<div id="popout-me">
+    <img class="profile-picture large" src="./q22_files/picture">
+    <form id="profile-form-inline" style="display: inline" novalidate="novalidate">
+        <ul>
+            <li>
+                <span id="student-name" class="editable">
+                    <span class="ms-TextField editable-input-container" style="display: none;">
+                        <input class="ms-TextField-field editable-input" name="Name" value="Kyle O&#39;Connor">
+                    </span>
+
+                    <span class="editable-value">Kyle O'Connor</span>
+                </span>
+                <button id="pencil-button" class="command-buttons ms-Button ms-Button--command" type="button">
+                    <span id="title-button-icon" class="ms-Button-icon"><i class="ms-Icon ms-Icon--pencil"></i></span>
+                </button>
+                <button id="save-button" class="command-buttons ms-Button ms-Button--command" style="display: none;" type="submit">
+                    <span id="save-button-icon" class="ms-Button-icon"><i class="ms-Icon ms-Icon--save"></i></span>
+                </button>
+                <div id="loader" class="loader loader-sm" style="display: none" data-item-template="loader" data-subclass="loader" data-version="1.9.1">
+                    <!-- add the loader-sm class for a smaller loader -->
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </li>
+
+            <li>
+                <div id="student-email" class="editable">
+                    <div class="ms-TextField editable-input-container" style="display: none;">
+                        <input class="ms-TextField-field editable-input" name="EMail" value="kyjoconn@ucsc.edu">
+                    </div>
+
+                    <span class="editable-value">kyjoconn@ucsc.edu</span>
+                </div>
+            </li>
+            <li></li>
+            <li>
+                <div id="student-graddate" class="editable">
+                    <div class="ms-TextField editable-input-container" style="display: none;">
+                        <input class="ms-TextField-field editable-input" id="monthpicker-inline" name="GradMonthYear" value="12/2016">
+                    </div>
+
+                    <span class="editable-value">12/2016</span>
+                </div>
+            </li>
+                <li class="presentation"></li>
+                <li>Invictus</li>
+                <li>Secret: <code>RueGEPe2</code></li>
+<div id="first-time-callout" class="ms-Callout ms-Callout--OOBE ms-Callout--arrowRight">
+    <div class="ms-Callout-main">
+        <div class="ms-Callout-header ms-Callout-header--l ms-bgColor-purple">
+            <p class="ms-Callout-title">Grow your team</p>
+        </div>
+        <div class="ms-Callout-inner">
+            <div class="ms-Callout-content">
+                <p class="ms-Callout-subText ms-Callout-subText--m">This secret is all others need to join your team.</p>
+            </div>
+            <div class="ms-Callout-actions">
+                <button id="first-time-button" class="ms-Callout-button ms-Button ms-Button--primary">
+                    <span class="ms-Button-label">Got it</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>        </ul>
+    </form>
+    <div class="action-center">
+        <div class="button-group">
+                <div class="popout-action"><a href="https://msft3c.com/compete/team/leave">Leave team</a></div>
+            <div class="popout-action"><a href="https://msft3c.com/account/LogOff">Sign out</a></div>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+    </nav>
+</header>
+    
+
+
+<div id="applicationHost" data-durandal-root="compete/index"><div id="compete-shell" data-view="compete/view/index" data-active-view="true">
+    <!-- ko router --><div id="problem-index" data-view="compete/view/problem/index" data-active-view="true">
+    <div class="left-bar" data-bind="compose: { model: &#39;compete/problem/list&#39;, transition: &#39;entrance&#39;, activationData: router }"><nav id="problem-list" class="list-view" data-view="compete/view/problem/list" data-active-view="true">
+    <h2>Problems</h2>
+    <ul data-bind="foreach: problemSetNav">
+        <li>
+            <h3 data-bind="text: pointValueHeader">1 point</h3>
+            <ul data-bind="foreach: problems">
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/0">Common characters</a>
+                </li>
+            
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/1">Find missing numbers</a>
+                </li>
+            
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/2">Xortholian Paintings</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li>
+            <h3 data-bind="text: pointValueHeader">2 points</h3>
+            <ul data-bind="foreach: problems">
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/3">Shuttle</a>
+                </li>
+            
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="active">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/4">Time Traveling Day Trader</a>
+                </li>
+            
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/5">Top secret</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li>
+            <h3 data-bind="text: pointValueHeader">3 points</h3>
+            <ul data-bind="foreach: problems">
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/6">Synonym Tree</a>
+                </li>
+            
+                <li data-bind="css: { active: id === $root.currentProblemId() }" class="">
+                    <a data-bind="text: title, attr: { href: href }" href="https://msft3c.com/problem/7">Word sequence</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    <div id="problem-details-index" class="main">
+        <!-- ko compose { model: 'compete/problem/details/index', transition: 'entrance', activationData: router }--><nav data-view="compete/view/problem/details/index" data-active-view="true">
+    <ul data-bind="foreach: router.navigationModel">
+        <li data-bind="css: { active: isActive }" class="active">
+            <a data-bind="attr: { href: hash() }, html: title" href="https://msft3c.com/problem/4/learn">Learn</a>
+        </li>
+    
+        <li data-bind="css: { active: isActive }" class="">
+            <a data-bind="attr: { href: hash() }, html: title" href="https://msft3c.com/problem/4/practice">Practice</a>
+        </li>
+    
+        <li data-bind="css: { active: isActive }" class="">
+            <a data-bind="attr: { href: hash() }, html: title" href="https://msft3c.com/problem/4/earn">Compete</a>
+        </li>
+    </ul>
+    <!-- ko if: problem() -->
+    <h2 data-bind="text: problemHeading()">Time Traveling Day Trader | 2 point(s)</h2>
+    <!-- /ko -->
+</nav><!-- /ko -->
+        <!-- ko router: { transition:'entrance' } --><div id="problem-details-description" class="problem-details-view" data-view="compete/view/problem/details/learn" data-active-view="true">
+    <!-- ko with: problem -->
+    <!--
+    <a href="#" class="ms-Button">Download</a>
+    -->
+    <div class="learn-content" data-bind="html: description"><p>This problem is inspired by the movie <a href="https://en.wikipedia.org/wiki/Primer_(film)" target="_blank">Primer</a>.
+Two people have accidentally just invented a time travel device.
+The startup they have been trying to launch together hasn't quite
+taken off yet, so they decide that a quick way to raise capital would be to use
+the time travel device to make sure bets in the stock market.</p>
+<p>Their plan is simple. Over the course of a day, they will monitor
+a number of stocks in the stock market and record their movements every hour.
+At the end of the day, they will use the time machine to travel back to the
+beginning of the day. Equipped with certain knowledge of the future, they will be
+able to trade in the stock market optimally - and hopefully make lots of money!</p>
+<p>In order to avoid suspicion, the two agree to hold only one share of stock at a time, and they agree to
+invest in only one stock throughout the day, since it's more believable that they
+got lucky on one stock than on many. Because they start with a finite amount of
+cash, they cannot buy a stock until its share price is less than or equal to the
+amount they have (including any profits they've made so far). Finally, if they enter
+the last hour of the day holding a share of stock, they decide it would be best
+to sell it to avoid any losses in after-hours trading.</p>
+<p>Your task is to determine what one stock they should trade and on what hours of the day
+to buy, hold, and sell it. The goal is to maximize total profit throughout the
+day, subject to the above constraints.</p>
+
+</div>
+    <h3>Input definition</h3>
+    <div class="learn-content" data-bind="html: inputDescription"><p>The input will contain an arbitrary number of lines. The first line will show
+the initial amount of money held at the beginning of the day, written in
+currency format with no dollar sign (for example, 19.50). The second line will
+be a list of hours of the trading day, in 24-hour format.</p>
+<p>Each of the remaining lines will be separated into a number of columns. The
+first column will be the ticker symbol of a stock. After that, for each hour of
+the day there will be a column containing the price of that stock at the
+corresponding hour, also in currency format with no dollar sign.</p>
+
+</div>
+    <h3>Output definition</h3>
+    <div class="learn-content" data-bind="html: outputDescription"><p>Your output should contain exactly four lines:</p>
+<ol>
+    <li>The ticker symbol of the stock you will choose in all caps</li>
+    <li>The amount of cash you end the day with in currency format with no dollar sign</li>
+    <li>A list of the hours of the trading day in 24-hour format (you might not be able to simply reprint the list that was in the input)</li>
+    <li>
+        Under each hour of the day, print the following:
+        <ul>
+            <li>"B" if you should buy the stock on that hour</li>
+            <li>"S" if you should sell the stock on that hour</li>
+            <li>"." if you are holding the stock during that hour</li>
+            <li>Nothing (whitespace) if none of the above apply</li>
+        </ul>
+    </li>
+</ol>
+<p>The alignment of your output is important; in particular, non-trailing whitespace must match the
+expected solutions to receive credit. Your ouput's third line should contain four spaces after
+each one-digit hour and three spaces after each two-digit hour. The fourth line's text should be
+aligned with the hours. You are strongly encouraged to use the practice inputs to ensure your
+output alignment is correct.</p>
+
+</div>
+    <h3>Example input</h3>
+    <pre><code data-bind="text: sampleInput">100.00
+     8      9      10     11     12     13     14     15     16     
+ABCD 400.00 412.10 410.33 399.98 401.10 408.07 409.79 410.22 408.80 
+ABDC 90.10  90.00  89.79  90.02  91.55  91.96  93.04  93.09  92.99  
+BCAD 42.22  43.20  45.10  39.99  39.20  48.21  50.03  47.45  46.38  
+</code></pre>
+    <h3>Example output</h3>
+    <pre><code data-bind="text: sampleOutput">BCAD
+113.71
+8    9    10   11   12   13   14   15   16   
+B    .    S         B    .    S              </code></pre>
+    <!-- /ko -->
+    
+<footer>
+    <ul class="nav">
+        <li><span class="copyright">© 2016 Microsoft</span></li>
+        <li><a href="mailto:msft3c@microsoft.com" target="_blank">Contact us</a></li>
+        <li><a href="https://msft3c.blob.core.windows.net/assets/rules/msft3c-rules.docx" target="_blank">Official rules</a></li>
+        <li><a title="" href="http://www.microsoft.com/privacystatement/en-us/GlobalCareers/Default.aspx" target="_blank">Privacy and cookies</a></li>
+        <li><a title="" href="http://go.microsoft.com/?linkid=4412892" target="_blank">Terms of use</a></li>
+        <li><a title="" href="http://go.microsoft.com/?linkid=4412893" target="_blank">Trademarks</a></li>
+
+    </ul>
+</footer>
+</div><!-- /ko -->
+    </div>
+    <aside class="right-bar" data-bind="compose: { model: &#39;compete/problem/scoreboard&#39;, transition: &#39;entrance&#39; }"><div id="compete-scoreboard" data-view="compete/view/problem/scoreboard" data-active-view="true">
+    <div id="current-score">
+        <h2>You have</h2>
+        <h2 id="score" data-bind="text: currentScore">5</h2>
+        <h2>pts</h2>
+    </div>
+    <h2>Top 3 teams</h2>
+    <p data-bind="if: leaderboard().length == 0"></p>
+    <ol data-bind="foreach: leaderboard" class="leaderboard">
+        <li class="leaderboard">
+            <span data-bind="text: teamName">teamname</span>
+            <span>:</span>
+            <span data-bind="text: points">15</span>
+        </li>
+    
+        <li class="leaderboard">
+            <span data-bind="text: teamName">ChineseSlug</span>
+            <span>:</span>
+            <span data-bind="text: points">8</span>
+        </li>
+    
+        <li class="leaderboard">
+            <span data-bind="text: teamName">Hung Ju Chen</span>
+            <span>:</span>
+            <span data-bind="text: points">8</span>
+        </li>
+    </ol>
+    
+</div></aside>
+</div><!-- /ko -->
+</div></div>
+
+
+
+
+
+    <script src="./q22_files/lib-site"></script>
+
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+
+    <script src="./q22_files/fabric"></script>
+
+    <script src="./q22_files/site(1)"></script>
+
+    
+    
+    
+    <script src="./q22_files/lib-spa"></script>
+
+
+    <script src="./q22_files/lib-app"></script>
+
+
+    
+
+    <script type="text/javascript">
+        var Paragon = Paragon || {};
+        Paragon.Configuration = {"CompeteStrings":{"ProblemList_SingularPointTitle":"point","ProblemList_PluralPointTitle":"points","ProblemView_Nav_Learn":"Learn","ProblemView_Nav_Practice":"Practice","ProblemView_Nav_Earn":"Compete","ProblemView_Nav_Try":"Try","ProblemView_Judge_BeginAttemptLabel":"Start submission (you have {0} remaining)","ProblemView_Judge_CorrectInputWarning":"Don\u0027t forget to download this submission\u0027s input text.","ProblemView_Judge_CodeRequiredLabel":"Please select a source code file to upload.","ProblemView_Judge_NotSubmittedTimeString":"Not submitted","ProblemView_Judge_OutOfTimeError_Format":"Time has expired for this submission. You have {0} attempts left.","ProblemView_Judge_OutputRequiredLabel":"You must paste your program\u0027s output here before submitting.","ProblemView_Judge_SubmitAttemptLabel":"Submit (you have {0} remaining)","ProblemView_PointValueLabel":"{0} point(s)","ProblemView_Test_Monaco_DefaultTestOutputText":"Paste your output here.","ProblemView_Test_SampleInputText":"Sample input {0}","ProblemView_Try_JudgeInputText":"Grading input {0}","Submissions_Status_Started_Label":"Started","Submissions_Status_Match_Label":"Correct","Submissions_Status_NotMatch_Label":"Incorrect","Submissions_Status_OutOfTime_Label":"Expired"},"ViewExtension":".html","IsDebuggingEnabled":false,"SubmissionTimeLimit":300000.0,"SiteStrings":{"SiteLayout_SiteTitle":"Microsoft College Code Competition (msft3c)"}};
+        Paragon.RequireJsPaths = {"text":"/scripts/opensource/require/text","durandal":"/scripts/opensource/durandal","plugins":"/scripts/opensource/durandal/plugins","transitions":"/scripts/opensource/durandal/transitions","webapp":"/scripts/webapp","models":"/scripts/webapp/models","shared":"/scripts/webapp/shared","vs":"/scripts/lib/monaco/vs","compete":"/scripts/webapp/compete","compete/view":"compete/view","recruiter":"/scripts/webapp/recruiter","recruit/view":"recruit/view","admin":"/scripts/webapp/admin","admin/view":"admin/view"};
+
+        var require = {
+            baseUrl: '/',
+            paths: Paragon.RequireJsPaths,
+            config: {
+                text: {
+                    onXhr: function (xhr, url) {
+                        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                        return xhr;
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="./q22_files/require.js" data-main="webapp/main"></script>
+
+    
+
+    <script type="text/javascript">
+        if (define) {
+            define('jquery', function () { return jQuery; });
+            define('knockout', ko);
+
+            
+            define('bluebird', function () { return Promise; });
+        }
+    </script>
+
+
+    <!-- Served By: msft3cWebRole_IN_0 -->
+
+</body></html>
