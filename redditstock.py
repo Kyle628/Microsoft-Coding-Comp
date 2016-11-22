@@ -16,6 +16,7 @@ for line in lines:
 
 def maxProfit(day, starting_cash):
     prices_at_hours = day["hours"]
+    og_prices_at_hours = day["hours"]
     prices_at_hours = [999999999] + prices_at_hours
     prices_at_hours.append(-999999999)
     buy_times = []
@@ -23,21 +24,26 @@ def maxProfit(day, starting_cash):
     can_buy = True
     can_sell = False
     print prices_at_hours
+    print starting_cash
     for i,price in enumerate(prices_at_hours):
         if (i == 0):
             continue
         elif (i == len(prices_at_hours) - 1):
             continue
-        elif (price < prices_at_hours[i - 1] and price < prices_at_hours[i+1] and can_buy):
+        elif (price < prices_at_hours[i - 1] and price < prices_at_hours[i+1] and can_buy and price < starting_cash):
             buy_times.append(i);
             can_buy = False
             can_sell = True
+            starting_cash -= price
+            print starting_cash
         elif (can_sell):
             if (price >= prices_at_hours[i-1] and price > prices_at_hours[i+1]):
                 sell_times.append(i)
                 can_buy = True
                 can_sell = False
+                starting_cash += price
     all_times = []
+    end_money = starting_cash
     for i,time in enumerate(buy_times):
         time -= 1
         buy_times[i] = time
@@ -47,19 +53,33 @@ def maxProfit(day, starting_cash):
     for i,time in enumerate(buy_times):
         all_times.append(time)
         all_times.append(sell_times[i])
-    print all_times
+    return {'end_money': end_money, 'buy_times': buy_times,
+     'sell_times': sell_times, 'stock': day['stock']}
 
 
-
-
-
-
-
-
-
-
-
-print starting_cash
+best_day = {'end_money': 0, 'all_times': []}
+for day in days:
+    day_results = maxProfit(day, starting_cash)
+    if day_results['end_money'] > best_day['end_money']:
+        best_day = day_results
+print best_day['stock']
+print best_day['end_money']
 print hours
-pprint(days)
-maxProfit(days[1], 500)
+buy_times = best_day['buy_times']
+sell_times = best_day['sell_times']
+for i in range(0,8):
+    if i in buy_times:
+        if i < 2:
+            sys.stdout.write("B    ")
+        else:
+            sys.stdout.write("B   ")
+    elif i in sell_times:
+        if i < 2:
+            sys.stdout.write("S    ")
+        else:
+            sys.stdout.write("S   ")
+    else:
+        if i < 2:
+            sys.stdout.write(".    ")
+        else:
+            sys.stdout.write(".   ")
